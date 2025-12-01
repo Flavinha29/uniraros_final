@@ -167,6 +167,6 @@ def alterar_foto(request):
     if request.method == "POST" and request.FILES.get("image"):
         profile.image = request.FILES["image"]
         profile.save()
-        return redirect("perfil")
+        return redirect("cadastro:perfil")
 
     return render(request, "cadastro/alterar_foto.html", {"profile": profile})
